@@ -1,0 +1,40 @@
+name: Factory task (maintainers)
+description: A single-repo, testable change specified for Foreman. Filing this does not start a run — a maintainer applies the factory label after review.
+title: "[Factory] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is the spec Foreman builds from. Settle every behaviour decision here before it is labelled.
+        Filing it does **not** start a run: a maintainer reviews it and applies the `factory` label separately.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is wrong or missing, and how you know (link the evidence).
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: One change, one repo. Name the files or area it touches and the behaviour chosen where there was a decision to make.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Checks that are observable and testable. Each one should be verifiable by a test or a command.
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: What this issue must not change, including related work that belongs in a separate issue.
+    validations:
+      required: true
